@@ -1,12 +1,15 @@
-# nuxt-game-monster-killer
+# nuxt-app
 
 <h1>
-Primeiro Projeto feito durante curso de VueJS 2 da Cod3r Cursosna Udemy
+Segundo Projeto feito durante curso de VueJS 2 da Cod3r Cursosna Udemy
 </h1>
-  
-  
-![image](https://user-images.githubusercontent.com/60307596/155350671-77bbbffc-122e-4899-9e44-2a05fa80a20f.png)
 
-![image](https://user-images.githubusercontent.com/60307596/155350831-6d770e97-4513-49ee-bce1-d5e727bee885.png)
+# Objetivo:
+## Aprender a comunicação entre componentes sem a ajuda do Vuex
 
-![image](https://user-images.githubusercontent.com/60307596/155350873-61c0cc80-932b-47fb-a3e2-cd78010cf224.png)
+# Algumas imagens : 
+
+![image](https://user-images.githubusercontent.com/60307596/155594119-93220f54-4a80-464e-b0d8-f866064aa954.png)
+
+![image](https://user-images.githubusercontent.com/60307596/155594361-9fe2c1a4-dcd2-4e3b-bbd8-a7dd452d51dc.png)
+
