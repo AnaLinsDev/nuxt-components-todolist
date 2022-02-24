@@ -4,6 +4,8 @@
     <h1>Todo List</h1>
     <p> Aprendendo comunicação entre components, sem o uso de Vuex</p>
 
+    {{setProgressBar}}
+
     <todo-progress 
     :progress='progress'/>
 
@@ -15,7 +17,7 @@
     @updateTask="updateTask"
     :list='list'/>
 
-    <p v-if="list.length == 0"> Sua a vida está em dia ! </p>
+    <p v-if="list.length == 0"> Sua vida está em dia ! </p>
 
   </div>
 </template>
@@ -41,20 +43,20 @@ export default {
    addTask(title){
      if (!(title == "" || this.list.find(e => e.title == title)) ){
         this.list.unshift({title: title, status: false})
-        this.setProgressBar
+        
      }
    },
 
    deleteTask(index){
      this.list.splice(index, 1)
-     this.setProgressBar
+     
    },
 
    updateTask({status, index}){
      if (this.list[index] != undefined){
       this.list[index].status = !status
      }
-     this.setProgressBar
+     
    },
 
  },
@@ -70,7 +72,26 @@ export default {
      let donePercentage = (done * 100) / length
      this.progress = Math.round(donePercentage, 2)
    }
-  }
+  },
+
+	watch: {
+		list: {
+      // deep irá também garantir q as alterações 
+      // nos objetos dentro do array, tambem entrem aqui
+			deep: true,
+      // cria o item list no localStorage
+			handler() {
+				localStorage.setItem('list', JSON.stringify(this.list))
+			}
+		}
+	},
+
+	created() {
+    // pegará o item list criado no watch e povoará novamente o array
+		const json = localStorage.getItem('list')
+		const array = JSON.parse(json)
+		this.list = Array.isArray(array) ? array : []
+	}
 }
 </script>
 
