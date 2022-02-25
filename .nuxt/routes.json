@@ -1,9 +1,9 @@
 [
   {
-    "name": "index",
-    "path": "/",
-    "component": "C:\\\\Projetos\\\\teste\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_5662fcbc"
+    "name": "learn-form",
+    "path": "/learn-form",
+    "component": "C:\\\\Projetos\\\\teste\\\\pages\\\\learn-form.vue",
+    "chunkName": "pages/learn-form",
+    "_name": "_cbcaf09a"
   }
 ]
